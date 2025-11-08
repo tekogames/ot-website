@@ -3,41 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oxen Tiger</title>
+    <title>OxenTiger</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-color: black;
-            color: white;
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
-
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-
-        .rotating-text {
-            font-size: 1.5rem;
-            display: inline-block;
-            position: relative;
-            animation: rotateText 3s linear infinite;
-        }
-
-        @keyframes rotateText {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+        body { font-family: 'Inter', sans-serif; margin: 0; padding: 0; color: #111; line-height: 1.6; }
+        header { background-color: #1a1a1a; color: #fff; padding: 80px 20px; text-align: center; }
+        header h1 { font-size: 3rem; margin-bottom: 20px; }
+        header p { font-size: 1.25rem; margin-bottom: 30px; }
+        header .cta { background-color: #ff6600; color: #fff; padding: 12px 30px; text-decoration: none; font-weight: 600; border-radius: 6px; }
+        
+        section { padding: 60px 20px; max-width: 900px; margin: 0 auto; }
+        section h2 { font-size: 2rem; margin-bottom: 20px; text-align: center; }
+        section p { text-align: center; margin-bottom: 20px; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .grid img { width: 100%; border-radius: 8px; object-fit: cover; }
+        
+        footer { background-color: #111; color: #fff; text-align: center; padding: 40px 20px; }
+        footer a { color: #ff6600; text-decoration: none; }
+        
+        @media (max-width: 768px) {
+            .grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
-    <h1>Coming Soon!</h1>
-    <div class="rotating-text">Under Construction</div>
+
+<!-- Header / Hero -->
+<header>
+    <h1>OxenTiger</h1>
+    <p>Engineering Leadership. Agile Delivery. Operational Excellence. Game Development.</p>
+    <a href="#contact" class="cta">Get in Touch</a>
+</header>
+
+<!-- About Section -->
+<section id="about">
+    <h2>About Me</h2>
+    <p>Hi, I’m Alex — an Engineering Manager passionate about building high-performing teams, improving delivery, and exploring game development. Through OxenTiger, I share lessons on leadership, agile practices, and operational excellence.</p>
+    <p>Follow along to grow your career and build better teams.</p>
+</section>
+
+<!-- Content Areas -->
+<section id="leadership">
+    <h2>Engineering Leadership</h2>
+    <div class="grid">
+        <img src="images/leadership.jpg" alt="Leadership Image">
+        <p>Learn actionable strategies for growing as an engineering manager, running effective 1:1s, and leading high-impact teams.</p>
+    </div>
+</section>
+
+<section id="agile">
+    <h2>Agile Delivery</h2>
+    <div class="grid">
+        <img src="images/agile.jpg" alt="Agile Image">
+        <p>Practical tips and frameworks for running sprints, retrospectives, and improving delivery outcomes without micromanaging.</p>
+    </div>
+</section>
+
+<section id="ops">
+    <h2>Operational Excellence</h2>
+    <div class="grid">
+        <img src="images/ops.jpg" alt="Operational Excellence Image">
+        <p>Learn how to measure team health, reduce inefficiencies, and create repeatable processes that scale.</p>
+    </div>
+</section>
+
+<section id="gamedev">
+    <h2>Game Development</h2>
+    <div class="grid">
+        <img src="images/gamedev.jpg" alt="Game Development Image">
+        <p>Follow my journey in game development, including devlogs, project updates, and creative insights from building indie games.</p>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+    <h2>Contact Me</h2>
+    <p>Reach out for consulting inquiries, collaborations, or to join my newsletter.</p>
+    <form action="#" method="POST" style="text-align:center;">
+        <input type="text" name="name" placeholder="Your Name" required style="padding:10px; width:60%; margin-bottom:10px;">
+        <br>
+        <input type="email" name="email" placeholder="Your Email" required style="padding:10px; width:60%; margin-bottom:10px;">
+        <br>
+        <textarea name="message" placeholder="Your Message" required style="padding:10px; width:60%; height:100px; margin-bottom:10px;"></textarea>
+        <br>
+        <button type="submit" style="padding:12px 30px; background-color:#ff6600; color:#fff; border:none; border-radius:6px; font-weight:600;">Send Message</button>
+    </form>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2025 OxenTiger | <a href="mailto:alex@oxentiger.com">alex@oxentiger.com</a></p>
+</footer>
+
 </body>
 </html>
